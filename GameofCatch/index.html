@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <title>Catch The Insect</title>
+</head>
+<body id="body">
+    <div class="screen ">
+        <h1>Catch The Insect</h1>
+        <button class="btn" id="start-btn">Play Game</button>
+    </div>
+    <div class="screen">
+        <h1>What is your "favorite" insect?</h1>
+        <ul class="insects-list">
+            <li>
+              <button class="choose-insect-btn">
+                <p>Fly</p>
+                <img src="http://pngimg.com/uploads/fly/fly_PNG3946.png" alt="fly">
+              </button>
+            </li>
+            <li>
+              <button class="choose-insect-btn">
+                <p>Mosquito</p>
+                <img
+                   src="http://pngimg.com/uploads/mosquito/mosquito_PNG18175.png"
+                   alt="mosquito"
+                   />
+              </button>
+            </li>
+            <li>
+              <button class="choose-insect-btn">
+                <p>Spider</p>
+                <img
+                   src="http://pngimg.com/uploads/spider/spider_PNG12.png"
+                   alt="spider"
+                   />
+              </button>
+            </li>
+            <li>
+              <button class="choose-insect-btn">
+                <p>Roach</p>
+                <img
+                   src="http://pngimg.com/uploads/roach/roach_PNG12163.png"
+                   alt="roach"
+                   />
+              </button>
+            </li>
+          </ul>
+    </div>
+
+    <div class="screen game-container" id="game-container">
+        <h3 id="time" class="time">Time: 00:00</h3>
+        <h3 id="score" class="score">Score:0</h3>
+        <h5 id="message" class="message">
+            Are you annoyed yet <br>
+            you are playing an impossible game...
+        </h5>
+        <h5 id="message2" class="message2">
+            Maybe this was a horror game all along...
+            <br> <hr> ...gnola lla emag rorroh a saw siht ebyaM</h5>
+        <h5 id="message3" class="message3">
+             HURRY!!! Kill all the evil before if corrupts the system again!!</h5>
+            <div class="hide img-div" id="img-div">
+                <img src="https://pngimg.com/uploads/skull/skull_PNG76.png" alt="" style="height: 120px; width: 120px">
+                <img src="https://pngimg.com/uploads/pentacle/pentacle_PNG26.png" alt="" style="height: 120px; width: 120px">
+            </div>
+            <div class="hide audio-div1">
+                <audio src="https://www.youtube.com/watch?v=38X9PNUhjhI&list=PL99E1F4985CBE70AD&index=17" ></audio>
+            </div>
+            <div class="hide audio-div2">
+                <audio src=""></audio>
+            </div>
+    </div>
+    <div class="screen end-game">
+        <i class="fas fa-crown"></i>
+        <h2>Congradulations!</h2>
+        <h1>You Have Finished The Game!!</h1>
+        <button class="end-btn" id="end-btn">Click to play again</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
