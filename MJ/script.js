@@ -5,8 +5,12 @@ const main = document.getElementById("main")
 const main2 = document.getElementById("main2")
 const genreEl = document.createElement("div")
 const countryEL = document.createElement("div")
+const movieBtn = document.getElementById("movie-btn")
+const showBtn = document.getElementById("show-btn")
+const showSec = document.getElementById("show-section")
+const movieSec = document.getElementById("movie-section")
 
-window.onload = noGenre(),noGenre2()
+window.onload = noGenre(),noGenre2(), movieBtn.classList.add("active-btn"),showMovies()
 
 genreEl.classList.add("show-genre")
 genreEl.innerHTML = `
@@ -81,6 +85,7 @@ countryEL.innerHTML = `
             <li>France</li>
             <li>America</li>
             <li>Germany</li>
+            <li>Turkey</li>
         </ul>
     `
 country.addEventListener("mouseover",()=>showCountry())
@@ -126,3 +131,39 @@ function oneOfTwo2(){
         noGenre()
     }
     }
+
+movieBtn.addEventListener("click", () => {
+   
+    if (movieBtn.classList.contains("active-btn")) {
+        showBtn.classList.add("active-btn")
+        showShows()
+    }else{
+        showBtn.classList.remove("active-btn")
+        showMovies()
+    }
+     movieBtn.classList.toggle("active-btn")
+})
+showBtn.addEventListener("click", () => {
+    
+    if (showBtn.classList.contains("active-btn")) {
+        movieBtn.classList.add("active-btn")
+        showMovies()
+    }else{
+        movieBtn.classList.remove("active-btn")
+        showShows()
+    }
+    showBtn.classList.toggle("active-btn")
+})
+
+function showMovies() {
+    if (movieSec.classList.contains("hide-it")) {
+        movieSec.classList.remove("hide-it")
+        showSec.classList.add("hide-it")
+    }
+}
+function showShows() {
+    if (showSec.classList.contains("hide-it")) {
+        showSec.classList.remove("hide-it")
+        movieSec.classList.add("hide-it")
+    }
+}
