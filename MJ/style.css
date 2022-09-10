@@ -634,26 +634,96 @@ footer{
     transform: scale(.98);
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* @media (max-width:800px){
+@media (max-width:500px){
+    body{
+        font-size: 10px;
+    }
     .nav{
         display: block;
     }
-} */
+    .left{
+        display: block;
+        text-align: center;
+    }
+    .left ul{
+        display: none;
+    }
+    .right{
+        margin: 15px 0px;
+        justify-content: space-between;
+    }
+    .search{
+        width: 60%;
+    }
+    .movie-show-section h1{
+        padding-top: 20px;
+        font-size: 2rem;
+    }
+    .movie-btn{
+        width: 100%;
+        padding-left: 0;
+        padding-right: 0;
+        margin: auto 5px;
+    }
+    .show-btn{
+        width: 100%;
+        padding-left: 0;
+        padding-right: 0;
+        margin: auto 5px;
+    }
+    .movie-card{
+        width: 90%;
+        font-size: 1rem;
+    }
+    .movie-card img{
+        width: 100%;
+        height: 120%;
+    }
+    .show-section .movie-card img{
+        width: 100%;
+        height: 110%;
+    }
+    .login-screen{
+        width: 100%;
+    }
+    .sign-out{
+        position: absolute;
+        top: 115px;
+    }
+    footer{
+    width: 100%;
+    background-color:  #271a3d;
+    height: fit-content;
+    text-align: center;
+    align-items: center;
+    }
+    .footer-div{
+        margin: 0 ;
+        width: 100%;
+        margin-top: 30px;
+        padding-bottom: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        color: white;
+        font-size: 1rem;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+    .footer-div div{
+        margin: 10px 0;
+    }
+    .div-1-of-foot{
+        padding-top: 20px;
+        display: flex;
+       
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+    .div-1-of-foot span{
+        width: 48%;
+        margin: 10px 0;
+        cursor: pointer;
+    }
+} 
