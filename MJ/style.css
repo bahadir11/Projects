@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    transition: .3s ease;
+    transition: .3s ;
 }
 body{
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
@@ -106,14 +106,12 @@ body{
     text-decoration: none;
     color: white;
     font-size: 18px;
-    transition: color .1s linear;
 }
 .login i{
     padding-right: 5px;
 }
 .login a:hover{
     color:#7353a7;
-    transition: color .1s linear;
 }
 .show-genre{
     z-index: 100;
@@ -481,23 +479,160 @@ footer{
     color:#a088c6;
     z-index: 5;
 }
-
-
-
-
-
-
-
-
 .hide-it{
     display: none;
 }
 
-
-
-
-
-
+.login-screen{
+    height: fit-content;
+    width:400px;
+    position: absolute;
+    background-color: #222;
+    top: 250px;
+    z-index: 400;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    padding: 20px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    transition: .2s display ease-in;
+}
+.login-screen img{
+    margin-top: 10px;
+    height: 30px;
+    width: 30px;
+}
+.login-screen form{
+    margin:10px 0px 5px 2px;
+    width: 95%;
+}
+.login-screen form div{
+    width: 100%;
+    padding: 10px 0;
+    font-size: 1rem;
+}
+.login-screen form div label{
+    text-transform: uppercase;
+    width: 100%;
+    display: block;
+    text-align: left;
+}
+.login-screen form div input{
+    width: 100%;
+    text-align: left;
+    border: 2px solid #7353a7;
+    height: 35px;
+    padding: 5px;
+    margin-top: 5px;
+    background-color: transparent;
+    color: white;
+}
+.login-screen form div input:focus{
+    outline: none;
+}
+.login-screen form div input::placeholder{
+    color: #a088c6;
+    font-size: 16px;
+}
+.double-side-login{
+    margin-top: -12px;
+    width: 100%;
+    font-size: .8rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.double-side-login span{
+    display: flex;
+    flex-direction: row;
+    width: 38%;
+}
+.double-side-login p{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: right;
+    word-spacing: 3px;
+    width: 62%;
+}
+.double-side-login p a{
+    text-decoration: none;
+    margin-left: 10px;
+    color: #a088c6;
+    cursor: pointer;
+}
+.double-side-login p a:hover{
+    text-decoration: underline;
+}
+.btn-for-login-screen{
+    background-color: #382a50;
+    color: white;
+    border: none;
+    text-transform:uppercase;
+    font-size: 1rem;
+    width: 100%;
+    height: 35px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+.btn-for-login-screen:active{
+    transform: scale(.98);
+}
+.btn-for-login-screen:hover{
+    box-shadow: 5px 5px 1px rgba(0,0,0,0.5);
+}
+.login-cover{
+    position: absolute;
+    top: 0;
+    left: 0%;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(0,0,0,0.9);
+    z-index: 100;
+}
+.hide-login{
+    display: none;
+    transition: .2s display ease-in;
+}
+.hide3{
+    visibility:hidden;
+    transition: .001s visibility ;
+}
+.sign-out{
+    width: 150px;
+    height: 50px;
+    background-color: #382a50;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    border-top: 10px solid transparent;
+    display: flex;
+    margin: 0px 10px;
+    margin-right: 20px;
+    padding:10px;
+    box-shadow: 3px 4px  1px rgba(0,0,0,0.5);
+    border-bottom-left-radius: 2px;
+    border-bottom-right-radius: 2px;
+    cursor: pointer;
+}
+.sign-out p{
+    text-decoration: none;
+    color: white;
+    font-size: 1.2rem;
+}
+.sign-out i{
+    padding-right: 5px;
+}
+.sign-out:hover p{
+    color:#7353a7;
+}
+.sign-out:active{
+    transform: scale(.98);
+}
 
 
 

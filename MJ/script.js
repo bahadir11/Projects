@@ -9,8 +9,14 @@ const movieBtn = document.getElementById("movie-btn")
 const showBtn = document.getElementById("show-btn")
 const showSec = document.getElementById("show-section")
 const movieSec = document.getElementById("movie-section")
+const loginCover = document.getElementById("login-cover");
+const loginScreen = document.getElementById("login-screen");
+const loginButton = document.getElementById("login-button");
+const signButton = document.getElementById("btn-for-login");
+const signOutDiv = document.getElementById("sign-out");
+const bodyOfHTML = document.getElementById("body");
 
-window.onload = noGenre(),noGenre2(), movieBtn.classList.add("active-btn"),showMovies()
+window.onload = noGenre(),noGenre2(), movieBtn.classList.add("active-btn"),showMovies(),delLogin()
 
 genreEl.classList.add("show-genre")
 genreEl.innerHTML = `
@@ -166,4 +172,101 @@ function showShows() {
         showSec.classList.remove("hide-it")
         movieSec.classList.add("hide-it")
     }
+}
+
+
+loginButton.addEventListener("click", () => {
+   if (loginButton.classList.contains("signed-in-now")) {
+        return;
+    }else{
+        loginToMovie()
+    }
+})
+signButton.addEventListener("click", () => {
+   
+    body.style.cursor = "wait"
+    setTimeout(() => {
+    if (loginScreen.classList.contains("hide-login") && loginCover.classList.contains("hide-login")) {
+        loginScreen.classList.remove("hide-login")
+        loginCover.classList.remove("hide-login")
+    }else{
+        loginCover.classList.add("hide-login");
+        loginScreen.classList.add("hide-login");
+    }
+    signedInMov()
+  }, 1000);
+
+  
+})
+loginCover.addEventListener("click", () => {
+  loginToMovie();
+})
+
+function loginToMovie() {
+    if (loginScreen.classList.contains("hide-login") && loginCover.classList.contains("hide-login")) {
+        loginScreen.classList.remove("hide-login")
+        loginCover.classList.remove("hide-login")
+    }else{
+        loginCover.classList.add("hide-login");
+        loginScreen.classList.add("hide-login");
+    }
+}
+function delLogin() {
+    loginCover.classList.add("hide-login");
+    loginScreen.classList.add("hide-login");
+}
+signOutDiv.addEventListener("click", () => {
+    location.reload()
+})
+
+function signedInMov() {
+    body.style.cursor = "inherit";
+    const username = document.getElementById("use").value;
+    loginButton.classList.add("signed-in-now");
+    loginButton.innerHTML = `
+    <a href="#" >
+    <i class="fa-regular fa-user"></i>
+    ${username}
+    </a>
+    `  
+   if (loginButton.classList.contains("signed-in-now")) {
+    checkTheSignOut()
+}
+
+function intoTheLogin() { 
+    signOutDiv.classList.add("sign-out")
+    signOutDiv.style.right = "0%"
+    signOutDiv.innerHTML = `
+    <div>
+    <p>
+    <i class="fa-solid fa-door-open"></i> Sign out 
+    </p>
+    </div>
+    `
+ }
+function outTheLogin() {
+    signOutDiv.style.right = "-100%"
+}
+
+function checkTheSignOut() {
+
+    loginButton.addEventListener("mouseover", () => {
+    intoTheLogin();       
+    })
+
+    loginButton.addEventListener("mouseleave", () => {
+        setTimeout(outTheLogin,500);
+       
+    })
+    signOutDiv.addEventListener("mouseover", () => {
+    intoTheLogin();       
+    })
+
+    signOutDiv.addEventListener("mouseleave", () => {
+        outTheLogin();       
+    })
+
+}
+
+
 }
